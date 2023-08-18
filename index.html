@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>   
+</head>
+<body>
+    <section class="py-10">
+        <div class="container mx-auto">
+            <div class="main flex">
+                <div class="left w-3/4">
+                    <div class="flex flex-wrap gap-6">
+                        <!-- Card no:01 -->
+                        <div class="card w-80 bg-base-100 border">
+                            <figure class="px-10 pt-10">
+                              <img src="./images/triangle.png"/>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">Triangle</h2>
+                              <p>Area (A) =0.5 x b x h</p>
+                              <div>
+                                <span>
+                                    <input id="baseIput" type="text" class="border w-20 outline-none p-2" placeholder="Base"> cm
+                                </span>
+                                <span>
+                                    <input id="heightInput" type="text" class="border w-20 outline-none p-2" placeholder="Height"> cm
+                                </span>
+                            </div>
+                                <div>Area: <span id="triangleResult">00</span> cm<sup>2</sup></div>
+                                <button onclick="calculateTriangleArea()" class=" bg-[#1090D8] py-2 w-3/4 block text-white font-bold rounded-lg">Calculate</button>
+                            </div>
+                          </div>
+        
+                        <!-- Card no:02 -->
+                        <div class="card w-80 bg-base-100 border">
+                            <figure class="px-10 pt-10">
+                              <img src="./images/rectangle.png"/>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">Rectangle</h2>
+                              <p>Area (A) =w x l</p>
+                              <div>
+                                <span>
+                                    <input id="rectWidth" type="text" class="border w-20 outline-none p-2" placeholder="Width"> cm
+                                </span>
+                                <span>
+                                    <input id="rectLength" type="text" class="border w-20 outline-none p-2" placeholder="Length"> cm
+                                </span>
+                            </div>
+                                <div>Area: <span id="setRectArea">00</span> cm<sup>2</sup></div>
+                                <button onclick="calculateRectangleArea()" class=" bg-[#1090D8] py-2 w-3/4 block text-white font-bold rounded-lg">Calculate</button>
+                            </div>
+                          </div>
+        
+                        <!-- Card no:03 -->
+                        <div class="card w-80 bg-base-100 border">
+                            <figure class="px-10 pt-10">
+                              <img src="./images/parallelogram.png"/>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">Parallelogram</h2>
+                              <p>Area (A) =b x h</p>
+                              <div>
+                                <span>
+                                    <input id="paraBase" type="text" class="border w-20 outline-none p-2" placeholder="Base"> cm
+                                </span>
+                                <span>
+                                    <input id="paraHeight"  type="text" class="border w-20 outline-none p-2" placeholder="Height"> cm
+                                </span>
+                            </div>
+                                <div>Area: <span id="setParaArea">00</span> cm<sup>2</sup></div>
+                                <button onclick="calculateParallelogramArea()" class=" bg-[#1090D8] py-2 w-3/4 block text-white font-bold rounded-lg">Calculate</button>
+                            </div>
+                          </div>
+
+                        <!-- Card no:04 -->
+                        <div class="card w-80 bg-base-100 border">
+                            <figure class="px-10 pt-10">
+                              <img src="./images/rhombus.png"/>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">Rhombus</h2>
+                              <p>Area (A) =0.5 x d1 x d2</p>
+                              <div>
+                                <span>
+                                    <input id="RhombusD1" type="text" class="border w-20 outline-none p-2" placeholder="Base"> cm
+                                </span>
+                                <span>
+                                    <input id="RhombusD2"  type="text" class="border w-20 outline-none p-2" placeholder="Height"> cm
+                                </span>
+                            </div>
+                                <div>Area: <span id="setRhombusArea">00</span> cm<sup>2</sup></div>
+                                <button onclick="calculateRhombusArea()" class=" bg-[#1090D8] py-2 w-3/4 block text-white font-bold rounded-lg">Calculate</button>
+                            </div>
+                          </div>
+
+                        <!-- Card no:05 -->
+                        <div class="card w-80 bg-base-100 border">
+                            <figure class="px-10 pt-10">
+                              <img src="./images/pentagon.png"/>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">Pentagon</h2>
+                              <p>Area (A) =1.72 x a<sup>2</sup></p>
+                              <div>
+                                <span>
+                                    <input id="arm" type="text" class="border w-20 outline-none p-2" placeholder="Base"> cm
+                                </span>
+                                <!-- <span>
+                                    <input id="paraHeight"  type="text" class="border w-20 outline-none p-2" placeholder="Height"> cm
+                                </span> -->
+                            </div>
+                                <div>Area: <span id="setPentagonArea">00</span> cm<sup>2</sup></div>
+                                <button onclick="calculatePentagonArea()" class=" bg-[#1090D8] py-2 w-3/4 block text-white font-bold rounded-lg">Calculate</button>
+                            </div>
+                          </div>
+
+                        <!-- Card no:06 -->
+                        <div class="card w-80 bg-base-100 border">
+                            <figure class="px-10 pt-10">
+                              <img src="./images/ellipse.png"/>
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">Ellipse</h2>
+                              <p>Area (A) =PI x a x b</p>
+                              <div>
+                                <span>
+                                    <input id="smallLength" type="text" class="border w-20 outline-none p-2" placeholder="Base"> cm
+                                </span>
+                                <span>
+                                    <input id="largeLength"  type="text" class="border w-20 outline-none p-2" placeholder="Height"> cm
+                                </span>
+                            </div>
+                                <div>Area: <span id="setEllipseArea">00</span> cm<sup>2</sup></div>
+                                <button onclick="calculateEllipseArea()" class=" bg-[#1090D8] py-2 w-3/4 block text-white font-bold rounded-lg">Calculate</button>
+                            </div>
+                          </div>
+                          
+                    </div>
+                </div>
+
+                <div class="right w-[35%] card border">
+                  <h1 class="text-3xl text-center py-5 bg-teal-600 text-white">Area Calculation</h1>
+                  <hr>
+                  <div >
+                    <table id="newElementAdd" class="table">
+
+                    </table>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./scripts/function.js"></script>
+    <script src="./scripts/calculation.js"></script>
+
+</body>
+</html>
